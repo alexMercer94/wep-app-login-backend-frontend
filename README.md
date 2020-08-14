@@ -1,5 +1,7 @@
 # WEB APP - Login
 
+![alt text](https://raw.githubusercontent.com/alexMercer94wep-app-login-backend-frontend/master/Login1.JPG)
+
 ## Requerimientos
 
 Es necesario tener instalado lo siguinte:
