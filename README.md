@@ -6,6 +6,7 @@ Es necesario tener instalado lo siguinte:
 
 - MongoDB
 - Node.js
+- Angular-CLI
 
 ## Base de Datos
 La base de datos utilizada es MongoDB, para levantar el servicio hay que ejecutar en una terminal el comando:
@@ -25,5 +26,18 @@ Para levantar el backend ejecutar el siguiente comando dentro de la carpeta back
 
 ````
 npm run dev
+````
+
+## Frontend
+
+Para correr esta parte del proyecto es necesario reconstruir los modulos de node de la carpeta frontend ejecutando el siguiente comando:
+
+````
+npm install
+````
+Para levantar el frontend ejecutar el siguiente comando dentro de la carpeta frontend:
+
+````
+ng serve
 ````
 

@@ -1,0 +1,98 @@
+<div class="md:w-4/5 xl:w-3/5 mx-auto mb-32">
+  <h2 class="text-4xl font-sans font-bold text-gray-800 text-center -my-4">
+    Crear Cuenta
+  </h2>
+  <div
+    class="bg-red-500 py-2 px-3 w-full my-3 max-w-lg text-center text-white mx-auto"
+    *ngIf="errorMsg"
+  >
+    {{ errorMsg }}
+  </div>
+  <div class="flex justify-center mt-5">
+    <div class="w-full max-w-lg">
+      <form
+        [formGroup]="signinForm"
+        class="bg-white rounded shadow-md px-8 pt-6 pb-8 mb-4"
+      >
+        <div class="mg-4">
+          <label class="block text-black text-sm font-bold mb-2" htmlFor="name">
+            Nombre
+          </label>
+          <input
+            formControlName="name"
+            name="name"
+            type="text"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="name"
+            autocomplete="off"
+            placeholder="Nombre de Usuario"
+          />
+          <div
+            class="my-2 bg-gray-200 border-l-4 border-red-500 text-red-700 p-4"
+            *ngIf="form.name.invalid && (form.name.dirty || form.name.touched)"
+          >
+            <p>El nombre debe tener al menos 10 caracteres.</p>
+          </div>
+        </div>
+        <div class="mg-4">
+          <label
+            class="block text-black text-sm font-bold mb-2"
+            htmlFor="email"
+          >
+            Correo electronico
+          </label>
+          <input
+            type="text"
+            formControlName="email"
+            name="name"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="email"
+            autocomplete="off"
+            placeholder="Email de Usuario"
+          />
+          <div
+            class="my-2 bg-gray-200 border-l-4 border-red-500 text-red-700 p-4"
+            *ngIf="
+              form.email.invalid && (form.email.dirty || form.email.touched)
+            "
+          >
+            <p>Correo electronico no válido</p>
+          </div>
+        </div>
+        <div class="mg-4">
+          <label
+            class="block text-black text-sm font-bold mb-2"
+            htmlFor="password"
+          >
+            Contraseña
+          </label>
+          <input
+            type="password"
+            formControlName="password"
+            name="password"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="password"
+            autocomplete="off"
+            placeholder="Contraseña"
+          />
+          <div
+            class="my-2 bg-gray-200 border-l-4 border-red-500 text-red-700 p-4"
+            *ngIf="
+              form.password.invalid &&
+              (form.password.dirty || form.password.touched)
+            "
+          >
+            <p>La contraseña debe tener al menos 6 caracteres.</p>
+          </div>
+        </div>
+        <input
+          type="submit"
+          class="bg-red-500 hover:bg-gray-900 w-full mt-4 p-2 text-white uppercase font-bold rounded"
+          [disabled]="signinForm.invalid"
+          (click)="btnCreateAccount()"
+          value="Crear Cuenta"
+        />
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<header class="py-8 flex flex-col md:flex-row items-center justify-between">
+  <a href="/" class="w-64 mb-8 md:mb-0"></a>
+  <div>
+    <div *ngIf="!token">
+      <a routerLink="/login">
+        <a
+          class="bg-red-500 px-5 py-3 rounded-lg text-white font-bold uppercase mr-2"
+        >
+          Iniciar Sesión
+        </a>
+      </a>
+      <a routerLink="/signin">
+        <a class="bg-black px-5 py-3 rounded-lg text-white font-bold uppercase"
+          >Registrarse</a
+        >
+      </a>
+    </div>
+    <div class="flex items-center" *ngIf="token">
+      <p class="mr-2">Hola</p>
+      <button
+        type="button"
+        class="bg-black px-5 py-3 rounded-lg text-white font-bold uppercase"
+        (click)="logout()"
+      >
+        Cerrar Sesión
+      </button>
+    </div>
+  </div>
+</header>
