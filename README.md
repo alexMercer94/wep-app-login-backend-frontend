@@ -1,6 +1,6 @@
 # WEB APP - Login
 
-![alt text](https://raw.githubusercontent.com/alexMercer94wep-app-login-backend-frontend/master/Login1.JPG)
+![alt text](https://raw.githubusercontent.com/alexMercer94/wep-app-login-backend-frontend/master/Login1.JPG)
 
 ## Requerimientos
 
